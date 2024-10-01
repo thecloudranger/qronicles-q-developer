@@ -1,0 +1,37 @@
+baseURL = "http://localhost"
+title = "My Technical workshops"
+theme = "hugo-geekdoc"
+
+# # Geekdoc theme settings
+# [params]
+# geekdocRepo = "https://github.com/thecloudranger/qronicles"
+# geekdocEditPath = "edit/main/content"
+# geekdocSearch = true
+# geekdocSearchShowParent = true
+# geekdocAnchor = true
+# geekdocLogo = "custom/logo.svg"
+
+# required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+
+# required for search
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# Required if you want to render robots.txt template
+enableRobotsTXT = true
+
+# Needed for mermaid shortcodes
+[markup]
+[markup.goldmark.renderer]
+# Needed for mermaid shortcode or when nesting shortcodes (e.g. img within
+# columns or tabs)
+unsafe = true
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 9
+
+[taxonomies]
+tag = "tags"
